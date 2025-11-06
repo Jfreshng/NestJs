@@ -13,9 +13,9 @@ import { NextFunction, Request, Response } from 'express';
 export class CustomerModuleModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(
-      validateCustomerMiddleware, 
-      ValidateExpiredCustomerMiddleware, 
-      ValidateCustomerAccountMiddleware, 
+      // validateCustomerMiddleware, 
+      // ValidateExpiredCustomerMiddleware, 
+      // ValidateCustomerAccountMiddleware, 
       (req: Request, res: Response, next: NextFunction) => {
         res.send("About to call the last middleWare");
         next();
